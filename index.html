@@ -1,0 +1,47 @@
+<html>
+<head>
+<script src="css/source-sans-pro.js"></script>
+<link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<script id="home-tpl" type="text/x-handlebars-template">
+    <div class='header'><h1>Enter Meter Number</h1></div>
+    <div class='search-bar'><input class='search-key' type="search"/></div>
+	<div><input type="button" style="float:right;margin:4px; height:30px" class="verify-button" value="Verify Meter No"></div>
+</script>
+<script id="meter-reading-tpl" type="text/x-handlebars-template">
+    <div class='header'><h1>Enter Current Reading</h1></div>
+    <div class='search-bar'><input class='search-key' type="search"/></div>
+	<div><input type="button" style="float:right;margin:4px; height:30px" class="record-reading" value="Submit"></div>
+</script>
+<script id="record-reading-tpl" type="text/x-handlebars-template">
+    <div class='header'><h1>Meter Reading</h1></div>
+    <div><h4>The reading was recorded successfully.</h4></div>
+</script>
+
+<script id="employee-tpl" type="text/x-handlebars-template">
+    <div class='header'><a href='' class="button header-button header-button-left">Back</a></div>
+    <div class='details'>
+	<h3><u>CUSTOMER DETAILS</u></h3>
+        <img class='employee-image' src='img/unknown.jpg' />
+        <h4>{{firstName}} {{lastName}}</h4>
+        <h5>Meter No: {{id}}</h5>
+        <span class="location"></span>
+        <ul>
+            <li><a href="tel:{{cellPhone}}">Phone<br/>{{cellPhone}}</a></li>
+            <li><a href="Location:{{location}}">Location<br/>{{location}}</a></li>
+        </ul>
+		<input type="button" class="meter-reading" value="Record Meter reading" style="float:right;margin:4px; height:30px">
+    </div>
+</script>
+<script src="lib/handlebars.js"></script>
+<script src="phonegap.js"></script>
+<script src="lib/jquery-1.8.2.min.js"></script>
+<script src="js/storage/memory-store.js"></script>
+<script src="js/HomeView.js"></script>
+<script src="js/EmployeeView.js"></script>
+<script src="js/MeterReadingView.js"></script>
+<script src="js/RecordReadingView.js"></script>
+<script src="js/main.js"></script>
+<script src="lib/iscroll.js"></script></body>
+</html>
